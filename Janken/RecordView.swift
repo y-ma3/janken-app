@@ -1,14 +1,8 @@
-//
-//  RecordView.swift
-//  JankenApp
-//
-//  Created by 釣悠馬 on 2023/04/30.
-//
-
 import SwiftUI
 
 struct RecordView: View {
     
+    @State private var isAlert = false
     @Binding var winningStreak: Int
     @Binding var numMatch: Int
     @Binding var numWin: Int
@@ -19,7 +13,9 @@ struct RecordView: View {
     
     var body: some View {
         VStack {
-            Text("戦績").font(.largeTitle)
+            Text("戦績")
+                .font(.largeTitle)
+                .padding()
             Text("対戦数：\(numMatch)")
             Text("勝利数：\(numWin)")
             Text("敗北数：\(numLose)")
@@ -28,14 +24,22 @@ struct RecordView: View {
             Text("現在の連勝数：\(winningStreak)")
             Text("過去最高連勝数：\(mostWinningStreak)")
             Button(action: {
-                UserDefaults.standard.removeObject(forKey: "numMatch")
-                UserDefaults.standard.removeObject(forKey: "numWin")
-                UserDefaults.standard.removeObject(forKey: "numLose")
-                UserDefaults.standard.removeObject(forKey: "numAiko")
-                UserDefaults.standard.removeObject(forKey: "winRate")
-                UserDefaults.standard.removeObject(forKey: "mostWinningStreak")
+                self.isAlert = true
             }) {
-                Text("リセット")
+                Text("リセット").padding()
+            }.alert(isPresented: $isAlert) {
+                Alert(title: Text("データは完全に失われます"),
+                      message: Text("本当に戦績をリセットしますか？"),
+                      primaryButton: .cancel(Text("やめとく")),
+                      secondaryButton: .destructive(Text("リセット！"),
+                                                    action: {
+                    UserDefaults.standard.removeObject(forKey: "numMatch")
+                    UserDefaults.standard.removeObject(forKey: "numWin")
+                    UserDefaults.standard.removeObject(forKey: "numLose")
+                    UserDefaults.standard.removeObject(forKey: "numAiko")
+                    UserDefaults.standard.removeObject(forKey: "winRate")
+                    UserDefaults.standard.removeObject(forKey: "mostWinningStreak")
+                }))
             }
         }.font(.title)
     }

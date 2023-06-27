@@ -1,10 +1,3 @@
-//
-//  ContentView.swift
-//  JankenApp
-//
-//  Created by 釣悠馬 on 2023/04/04.
-//
-
 import SwiftUI
 
 struct ContentView: View {
@@ -82,9 +75,6 @@ struct ContentView: View {
                         self.computerHand = chooseComputerHand()
                         self.text = determineVictoryOrDefeat(playerHand: self.playerHand, computerHand: self.computerHand)
                         storeRecord(playerHand: self.playerHand, computerHand: self.computerHand)
-//                        DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
-//                            self.text = "じゃんけん・・・"
-//                        }
                     }) {
                         Image("janken_gu_tab")
                             .resizable()
@@ -95,9 +85,6 @@ struct ContentView: View {
                         self.computerHand = chooseComputerHand()
                         self.text = determineVictoryOrDefeat(playerHand: self.playerHand, computerHand: self.computerHand)
                         storeRecord(playerHand: self.playerHand, computerHand: self.computerHand)
-//                        DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
-//                            self.text = "じゃんけん・・・"
-//                        }
                     }) {
                         Image("janken_choki_tab")
                             .resizable()
@@ -108,9 +95,6 @@ struct ContentView: View {
                         self.computerHand = chooseComputerHand()
                         self.text = determineVictoryOrDefeat(playerHand: self.playerHand, computerHand: self.computerHand)
                         storeRecord(playerHand: self.playerHand, computerHand: self.computerHand)
-//                        DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
-//                            self.text = "じゃんけん・・・"
-//                        }
                     }) {
                         Image("janken_pa_tab")
                             .resizable()
