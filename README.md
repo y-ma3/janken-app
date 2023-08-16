@@ -1,4 +1,4 @@
-# <img src="https://github.com/tsuri33/janken-app/assets/133128231/400ef51d-9e62-46db-873a-89077c6d9c37" width="50">  おじいちゃんとじゃんけん！（リリース済み）
+# <img src="https://github.com/tsuri33/janken-app/assets/133128231/400ef51d-9e62-46db-873a-89077c6d9c37" width="50">  おじいちゃんとじゃんけん！（リリース済）
 
 AppStoreのリンクは[こちら](https://apps.apple.com/app/%E3%81%8A%E3%81%98%E3%81%84%E3%81%A1%E3%82%83%E3%82%93%E3%81%A8%E3%81%98%E3%82%83%E3%82%93%E3%81%91%E3%82%93/id6450840743)
 
