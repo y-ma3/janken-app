@@ -68,7 +68,7 @@ struct ContentView: View {
                         .resizable()
                         .scaledToFit()
                 }
-                //            ボタン
+                // ボタン
                 HStack {
                     Button(action: {
                         playerHand = 0
@@ -138,7 +138,6 @@ func storeRecord(playerHand:Int, computerHand:Int) {
     
 //    あいこ
     if (playerHand == computerHand) {
-        winningStreak = 0
         numMatch += 1
         numAiko += 1
 //    勝ち
