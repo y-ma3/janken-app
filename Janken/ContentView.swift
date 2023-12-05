@@ -157,8 +157,6 @@ func storeRecord(playerHand:Int, computerHand:Int) {
     winRate = numWin * 100 / numMatch
 }
 
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
-    }
+#Preview {
+    ContentView()
 }

@@ -45,8 +45,6 @@ struct RecordView: View {
     }
 }
 
-struct RecordView_Previews: PreviewProvider {
-    static var previews: some View {
+#Preview {
         RecordView(winningStreak: .constant(0), numMatch: .constant(0), numWin: .constant(0), numLose: .constant(0), numAiko: .constant(0), winRate: .constant(0), mostWinningStreak: .constant(0))
-    }
 }
